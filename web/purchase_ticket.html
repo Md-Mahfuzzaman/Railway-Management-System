@@ -1,0 +1,106 @@
+<html>
+<head>
+     <title>Ticket Booking Form</title>
+      <link rel="stylesheet" href="purchase_ticket.css">
+</head>
+
+
+<body>
+
+
+  <div>
+    <h1>Ticket Booking Form</h1>
+    </div>
+
+  <div class="loginbox">
+    <form action="purchase_ticket.php" method="POST" >
+
+
+     <div>
+            <label>Passenger First Name:</label><br>
+            <input type="text" name="passenger_fname" class="form-control" placeholder="First Name">
+       </div>
+         
+        <div>
+             <label>Passenger Last Name:</label><br>
+             <input type="text" name="passenger_lname" class="form-control" placeholder="Last Name">
+        </div>
+
+    <div>
+      <label>Passenger Email Address:</label><br>
+            <input type="text" name="passenger_email" class="form-control" placeholder="Email Address">
+        </div>
+
+    <div>
+            <label>Departure From:</label>
+              <select name = "travel_from">
+                <option value="Dhaka"> Dhaka</option>
+              </select>
+    </div>
+
+        <div>
+          <br><label>Departure To: </label>
+          <select name = "travel_to">
+            <option value="Chittagong">Chittagong</option>
+            <option value="Khulna">Khulna</option>
+            <option value="Mymensingh">Mymensingh</option>
+            <option value="Rajshahi">Rajshahi</option>
+            <option value="Rangpur">Rangpur</option>
+            <option value="Sylhet">Sylhet</option>
+        
+          </select>
+      </div>
+
+
+
+
+
+
+      <div>
+          <br><label>Train Name: </label>
+          <select name = "train_name">
+            <option value="Subarna Express">Subarna Express</option>
+            <option value="Sundarban Express">Sundarban Express</option>
+            <option value="Tista Express">Tista Express</option>
+            <option value="Silk City Express">Silk City Express</option>
+            <option value="Rangpur Express">Rangpur Express</option>
+            <option value="Upaban Express">Upaban Express</option>
+        
+          </select>
+      </div>
+
+
+
+
+        <div>
+          <br><label>Departing Date: </label>
+          <input type="date" name="date" class="form-control select-date">
+        </div>
+
+        <div >
+           <label>No of Seats: </label>
+           <input type="number" name="seat" class="form-control" value="1">
+        </div>
+        
+        <div>
+            <label>Travel Class: </label>
+             <select name="class" class="custom-select">
+              <option value="Economy"> Economy </option>
+              <option value="Business"> Business </option>
+             </select>
+        </div>
+
+         <br>
+         <br>
+
+        <div>
+            <input type="submit" name="submit" value="Submit" > 
+        </div>
+        
+        
+
+        
+      </div>
+</form>
+</body>
+</html>
