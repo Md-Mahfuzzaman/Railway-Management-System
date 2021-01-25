@@ -2,44 +2,44 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Admin</title>
+    <title>Fare Query</title>
       <!-- <link rel="stylesheet" type="text/css" href="style_flights.css"> -->
 
-<h2 align="center" class="h">Admin List</h2>
+
 
   </head>
-  <body style="background-color:LAVENDER;">
+  <body style="background-color:LIGHTGRAY;">
       <header>
     <style>
     table {
-      background: #FFD700;
-      text-align: center;
+       background: #F0FFFF;
       font-family: arial, sans-serif;
       border-collapse: collapse;
       width: 90%;
     }
 
     td, th {
-      border: 2px solid #8A2BE2;
+
+      border: 2px solid #D2691E;
       text-align: center;
       padding: 8px;
     }
 
      tr:nth-child(even) {
-      background-color: #AFEEEE;
+      background-color: #F0FFF0;
     } 
     </style>
 
 
 
-<h2 align="center"></h2>
+<h2 align="center">Fare Query</h2>
 
 <table align="center">
   <tr>
-    <th>NAME</th>
-    
-    <th>EMAIL</th>
-    
+    <th>TRAIN ID</th>
+    <th>TRAIN NAME</th>
+    <th>Economy Class Fare</th>
+    <th>Business Class Fare</th>
   </tr>
 
 
@@ -52,12 +52,12 @@ if($conn->connect_error){
   die("connection failed:". $conn-> connect_error);
 
 }
-$sql="SELECT  name, email FROM admin ";
+$sql="SELECT  train_id, train_name, economy_class_price, business_class_price FROM ticket";
 $result = $conn->query($sql);
 
 if($result->num_rows>0){
   while($row=$result-> fetch_assoc()){
-    echo "<tr><td>". $row["name"] ."</td><td>".$row["email"] ."</td></tr>";
+    echo "<tr><td>". $row["train_id"] ."</td><td>".$row["train_name"] ."</td><td>".$row["economy_class_price"] ."</td><td>".$row["business_class_price"] ."</td><td>";
   }
   echo "</table>";
 } else{
@@ -73,9 +73,8 @@ $conn->close();
 <br>
 <br>
 <br>
-<br>
 
-<a href="admin_dashboard.php"><center><font color="CRIMSON">Back to Admin Dashboard</font></center> </a>
+         <a href="admin_dashboard.php"><center><font color="black">Back to Admin Dashboard</font></center> </a>
 
 </body>
 </html>

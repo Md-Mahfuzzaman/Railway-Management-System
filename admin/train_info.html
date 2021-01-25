@@ -1,0 +1,71 @@
+<html>
+<head>
+     <title>Train Route</title>
+      <link rel="stylesheet" href="train_info.css">
+</head>
+
+
+<body>
+
+
+  <div align="center">
+    <h1>Train Information</h1>
+    </div>
+
+  <div class="loginbox">
+    <form action="train_info.php" method="POST" >
+
+
+     <div>
+            <label>Train ID</label><br>
+            <input type="text" name="train_id" class="form-control" placeholder="Train ID">
+       </div>
+         
+        <div>
+             <label>Train Name:</label><br>
+             <input type="text" name="train_name" class="form-control" placeholder="Train Name">
+        </div>
+
+  
+
+    <div>
+            <label>Departure From</label><br>
+              <select name = "departure_from">
+                <option value="Dhaka"> Dhaka</option>
+              </select>
+    </div>
+
+        <div>
+          <br><label>Departure To: </label><br>
+          <select name = "arrival_to">
+            <option value="Chittagong">Chittagong</option>
+            <option value="Khulna">Khulna</option>
+            <option value="Mymensingh">Mymensingh</option>
+            <option value="Rajshahi">Rajshahi</option>
+            <option value="Rangpur">Rangpur</option>
+            <option value="Sylhet">Sylhet</option>
+        
+          </select>
+      </div>
+ <br>
+      <div>
+             <label>Departure Time:</label><br>
+             <input type="text" name="departure_time" class="form-control" placeholder="Departure Time">
+        </div>
+
+
+  
+        
+       
+        <br> 
+        <div>
+            <input type="submit" name="submit" value="Submit" > 
+        </div>
+        
+        
+
+        
+      </div>
+</form>
+</body>
+</html>
